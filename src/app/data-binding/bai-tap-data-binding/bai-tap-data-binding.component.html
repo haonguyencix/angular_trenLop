@@ -1,0 +1,12 @@
+<h1 style="color: purple">Register form</h1>
+<h5>Email:</h5>
+<div>
+  <input type="text" [value]="email" [(ngModel)]="email">
+</div>
+<h5>FullName:</h5>
+<div>
+  <input type="text" [value]="fullname" #fname>
+</div>
+<button class="btn btn-success" (click)="event(fname.value)">Submit</button>
+<p style="font-weight: bold">Email: {{email}}</p>
+<p style="font-weight: bold">Fullname: {{fullname}} </p>

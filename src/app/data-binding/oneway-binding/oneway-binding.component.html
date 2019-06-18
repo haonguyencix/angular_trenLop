@@ -1,0 +1,16 @@
+<h1 style="color: purple">Oneway Binding</h1>
+<h4 style="color: red">Interpolation</h4>
+<!-- Interpolation -->
+<p>
+  {{name}}
+</p>
+
+<h4 style="color: green">Property Binding</h4>
+<!-- Property Binding: Thuộc tính --> 
+<div>
+  <input type="text" [value]="name" #thamso>
+</div>
+
+<h4 style="color: blue">Event Binding</h4>
+<!-- Event Binding -->
+<button class="btn btn-success" (click)="eventBinding(thamso.value)">Event Binding</button>

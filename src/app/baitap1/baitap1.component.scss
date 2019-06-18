@@ -1,0 +1,31 @@
+@mixin body ($width, $bg) {
+    width: $width;
+    background-color: $bg;
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding: 250px 0;
+}
+.header{
+    background-color: #FF4A4D;
+    text-align: center;
+    padding: 10px 0;;
+    display: block;
+    color: white;
+}
+.body{
+    display: flex;
+    .content{
+        @include body(80%, #FFC64A);
+    }
+    .sidebar{
+        @include body(20%, #85C69D);
+    }
+}
+.footer{
+    background-color: #3B83B1;
+    text-align: center;
+    padding: 10px 0;
+    display: block;
+    color: white;
+}

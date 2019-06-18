@@ -1,0 +1,16 @@
+<h1 style="color: purple">*ngSwitch</h1>
+<div [ngSwitch]="dkSwitch">
+  <div *ngSwitchCase="'red'" style="color:red">Màu đỏ</div>
+  <div *ngSwitchCase="'blue'" style="color:blue">Màu xanh</div>
+  <div *ngSwitchCase="'green'" style="color: green">Màu xanh lá cây</div>
+  <div *ngSwitchDefault style="color: orange">Màu cam</div>
+</div>
+
+<select #t (change)="changeColor(t.value)">
+  <!-- <select #t (change)="dkSwitch = t.value"></select>
+Thay đổi trực tiếp biến, nhưng chỉ sử dụng khi có 1 lệnh, không cần gọi phương thức trong file ts nữa -->
+  <option value="red">Màu đỏ</option>
+  <option value="blue">Màu xanh</option>
+  <option value="green">Màu xanh lá cây</option>
+  <option value="orange">Màu cam</option>
+</select>

@@ -1,0 +1,16 @@
+<h1 style="color: purple">*ngIf</h1>
+<div *ngIf="status">Cybersoft</div>
+<button class="btn btn-danger" (click)="hidden()">Hidden</button>
+<button class="btn btn-success" (click)="show()">Show</button>
+
+<div class="mt-5" *ngIf="statusLogin; else NoiDungElse">
+  <button class="btn btn-primary" (click)="logOut()">Đăng xuất</button>
+  <h1>Xin chào Cybersoft</h1>
+</div>
+
+<ng-template #NoiDungElse>
+  <div class="mt-5">
+    <button class="btn btn-success" (click)="logIn()">Đăng nhập</button>
+    <h1>Vui lòng đăng nhập</h1>
+  </div>
+</ng-template>

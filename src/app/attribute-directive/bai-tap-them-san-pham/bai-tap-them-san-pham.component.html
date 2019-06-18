@@ -1,0 +1,35 @@
+<div class="form-group">
+  <label for="">Mã SP</label>
+  <input type="text" [value]="ma" class="form-control" #maSP>
+</div>
+<div class="form-group">
+  <label for="">Tên SP</label>
+  <input type="text" [value]="ten" class="form-control" #tenSP>
+</div>
+<div class="form-group">
+  <label for="">Giá</label>
+  <input type="text" [value]="gia" class="form-control" #giaSP>
+</div>
+
+<button class="btn btn-success mb-5" (click)="themSP(maSP.value, tenSP.value, giaSP.value)">Thêm sản phẩm</button>
+
+<table class="table">
+  <thead class="bg-dark text-light">
+    <tr>
+      <th>STT</th>
+      <th>Mã SP</th>
+      <th>Tên SP</th>
+      <th>Giá</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngIf="DSSP !=null">
+      <tr *ngFor="let item of DSSP, let stt = index" [ngClass]="{bgTr: (stt + 1) % 2 === 0}">
+        <td>{{stt + 1}}</td>
+        <td>{{item.ma}}</td>
+        <td>{{item.ten}}</td>
+        <td>{{item.gia}}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
